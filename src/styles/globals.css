@@ -1,0 +1,180 @@
+/* Estilos copiados del HTML original */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/Fondo.png") center/cover no-repeat;
+  color: #fff;
+}
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00000000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 140px;
+  width: auto;
+  object-fit:contain;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 40px;
+  gap: 30px;
+}
+
+.hero-text {
+  max-width: 400px;
+  padding: 32px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(69 32 96) 30%,
+    rgba(75, 35, 104, 0.384) 60%,
+    rgba(29, 15, 48, 0.253) 100%
+        );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.hero-image {
+  flex: 1;
+  max-width: 400px;
+}
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.hero-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 5px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero-text a {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  border: none;
+  backdrop-filter: blur(4px);
+  
+}
+.hero-text a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+section {
+  padding: 50px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.products, .categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #000000;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.about {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #000;
+  font-size: 0.9rem;
+  color: #777;
+}
+.card img {
+  max-height: 250px; 
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.perfume-img.eros {
+  filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.6));
+}
+
+.perfume-img.khamrah {
+  filter: drop-shadow(0 0 40px rgba(231, 176, 56, 0.671));
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+}
