@@ -12,7 +12,7 @@ body {
 header {
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #00000000;
 }
@@ -30,6 +30,7 @@ header {
 
 nav a {
   margin-left: 20px;
+  margin-right: 20px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
