@@ -1,0 +1,63 @@
+.productos-admin-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: #f5f5f5;
+  }
+  
+  .productos-titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .productos-tabla {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .productos-tabla th,
+  .productos-tabla td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+  
+  .productos-tabla th {
+    background: #fafafa;
+    font-weight: bold;
+  }
+  
+  
+  .editar-btn,
+  .eliminar-btn {
+    padding: 0.4rem 0.8rem;
+    margin: 0 4px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .editar-btn {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .eliminar-btn {
+    background-color: #d32f2f;
+    color: white;
+  }
+  .productos-tabla td[colspan="4"] {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+  }
