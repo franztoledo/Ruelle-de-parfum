@@ -11,12 +11,14 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/Fondo.png") center/cover no-repeat;
   color: #fff;
 }
-header {
+.header {
   padding: 20px 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #00000000;
+  background-color: transparent;
+  position: relative;
+  z-index: 999;
 }
 
 .logo-container {
@@ -27,7 +29,7 @@ header {
 .logo {
   height: 140px;
   width: auto;
-  object-fit:contain;
+  object-fit: contain;
 }
 
 nav a {

@@ -1,0 +1,137 @@
+.header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Opciones Desktop */
+  .nav-desktop {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-desktop a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-desktop a:hover {
+    color: #c5a3ff;
+  }
+  
+  /* Botón menú hamburguesa (mobile) */
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Menú mobile fullscreen */
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1c1c1e; /* Color oscuro, elegante, coherente con tu página */
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .fullscreen-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .menu-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Botón cerrar a la derecha */
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .menu-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+.close-button {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: white;
+    /* Empuja el botón hacia la derecha */
+}
+  
+  .menu-links {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .menu-links a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .menu-links a:hover {
+    color: #c5a3ff;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    .nav-desktop {
+      display: none; /* Esconder opciones normales en mobile */
+    }
+  
+    .logo {
+      width: 200px; /* Logo más pequeño en mobile */
+    }
+  
+    .menu-logo {
+      width: 90px; /* Logo dentro del menú */
+    }
+  }
+  
