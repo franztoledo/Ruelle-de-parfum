@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useEffect } from "react";
+import Modal from "../components/Modal"; // Importamos el modal
 
 export default function Products() {
   const [productos, setProductos] = useState([]);
+  const [productoSeleccionado, setProductoSeleccionado] = useState(null);
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -15,6 +17,14 @@ export default function Products() {
     fetchProductos();
   }, []);
 
+  const handleCardClick = (producto) => {
+    setProductoSeleccionado(producto);
+  };
+
+  const closeModal = () => {
+    setProductoSeleccionado(null);
+  };
+
   return (
     <section id="perfumes">
       <h3>Best Sellers</h3>
@@ -23,19 +33,22 @@ export default function Products() {
           <p>Cargando perfumes...</p>
         ) : (
           productos.map((producto) => (
-            <div key={producto.id} className="card">
+            <div key={producto.id} className="card" onClick={() => handleCardClick(producto)} style={{ cursor: 'pointer' }}>
               <img
                 className="perfume-img"
-                src={producto.imagen || '/assets/default-perfume.png'} // Imagen del producto o default
+                src={producto.imagen || '/assets/default-perfume.png'}
                 alt={producto.nombre}
               />
               <h4>{producto.nombre}</h4>
               <p>{producto.descripcion}</p>
-              <strong>S/. {producto.precio}</strong>
+              <strong>${producto.precio}</strong>
             </div>
           ))
         )}
       </div>
+
+      {/* Modal separado */}
+      <Modal producto={productoSeleccionado} onClose={closeModal} />
     </section>
   );
 }

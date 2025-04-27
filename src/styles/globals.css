@@ -1,11 +1,13 @@
 /* Estilos copiados del HTML original */
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600&display=swap');
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif; /* Fuente base para todo el cuerpo */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/Fondo.png") center/cover no-repeat;
   color: #fff;
 }
@@ -88,6 +90,10 @@ nav a {
   display: inline-block;
   border: none;
   backdrop-filter: blur(4px);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700; /* MÁS MARCADO */
+  font-size: 1rem;
+  letter-spacing: 0.5px;
   
 }
 .hero-text a:hover {
@@ -179,3 +185,16 @@ footer {
     max-width: 100%;
   }
 }
+/* Títulos */
+h1, h2, h3, h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+/* Párrafos y descripciones */
+p, .about, .modal-description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+

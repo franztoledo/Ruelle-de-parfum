@@ -1,0 +1,137 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: #1c1c1e;
+  border-radius: 20px;
+  padding: 50px 60px; 
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* 📍 CENTRAR todo horizontalmente */
+  justify-content: center; /* CENTRAR el contenido en el modal */
+  gap: 60px; 
+  flex-wrap: wrap;
+}
+
+.modal-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image img {
+  width: 100%;
+  max-width: 300px; /* NO MÁS de 300px en desktop */
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.modal-details {
+  flex: 2;
+  color: #fff;
+  min-width: 250px;
+}
+
+.modal-details h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.modal-details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.modal-details p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.modal-details strong {
+  text-align: center;
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.buy-button {
+  display: inline-block;
+  background: #6e40c9;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700; /* FUENTE MÁS MARCADA */
+  font-size: 1rem; /* TAMAÑO ADECUADO */
+  letter-spacing: 0.5px; /* UN POCO DE ESPACIADO */
+  margin: 0 auto; /* CENTRAR HORIZONTALMENTE */
+  display: block; /* NECESARIO PARA QUE MARGIN AUTO FUNCIONE */
+  text-align: center; /* CENTRAR EL TEXTO DENTRO DEL BOTÓN */
+}
+
+.buy-button:hover {
+  background: #8f5de2;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RESPONSIVE: en pantallas menores a 768px */
+@media (max-width: 768px) {
+  .modal-content {
+    gap:0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modal-image img {
+    max-width: 50%; /* En celulares, imagen ocupa 90% del ancho */
+  }
+
+  .modal-details {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
